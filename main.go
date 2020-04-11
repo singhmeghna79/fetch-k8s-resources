@@ -10,8 +10,8 @@ import (
 
 	"k8s.io/client-go/dynamic/dynamicinformer"
 
-	"github.com/singhmeghna79/fetch-k8s-resource/pkg/dynamicwatcher"
-	"github.com/singhmeghna79/fetch-k8s-resource/pkg/memdb"
+	"github.com/shovanmaity/fetch-k8s-resource/pkg/dynamicwatcher"
+	"github.com/shovanmaity/fetch-k8s-resource/pkg/memdb"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/client-go/dynamic"
