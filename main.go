@@ -5,12 +5,13 @@ import (
 	"os/signal"
 
 	"encoding/json"
+
 	"github.com/sirupsen/logrus"
 
 	"k8s.io/client-go/dynamic/dynamicinformer"
 
-	"github.com/shovanmaity/fetch-k8s-resource/pkg/dynamicwatcher"
-	"github.com/shovanmaity/fetch-k8s-resource/pkg/memdb"
+	"github.com/singhmeghna79/fetch-k8s-resource/pkg/dynamicwatcher"
+	"github.com/singhmeghna79/fetch-k8s-resource/pkg/memdb"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/client-go/dynamic"
@@ -158,7 +159,7 @@ func main() {
 					usNew.UnstructuredContent(),
 				}
 				err = t.Save(r)
-				if err != nil{
+				if err != nil {
 					logrus.Error(err)
 				}
 				logrus.Infof("received update event [%s/%s] in [%s] namespace", usNew.GetKind(), usNew.GetName(), usNew.GetNamespace())
